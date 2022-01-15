@@ -19,6 +19,7 @@ MINIO_BROWSER_REDIRECT_URL=http://172.17.0.1:9001 # URL of Minion console
 MINIO_IDENTITY_OPENID_CONFIG_URL=https://172.17.0.1:8443/auth/realms/master/.well-known/openid-configuration # Keycloak URL
 MINIO_IDENTITY_OPENID_CLIENT_ID=minio # Keycloak client
 MINIO_IDENTITY_OPENID_CLIENT_SECRET= # Keycloak client secret from section above
+MINIO_IDENTITY_OPENID_CLAIM_NAME=s3-policy # Name of the minio policy attribute defined in the Keycloak client
 ```
 
 ## Certificates

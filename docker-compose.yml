@@ -1,4 +1,4 @@
-version: '3.7'
+version: '2.3'
 
 # Settings and configurations that are common for all containers
 x-minio-common: &minio-common
@@ -15,6 +15,7 @@ x-minio-common: &minio-common
     MINIO_IDENTITY_OPENID_CONFIG_URL: ${MINIO_IDENTITY_OPENID_CONFIG_URL}
     MINIO_IDENTITY_OPENID_CLIENT_ID: ${MINIO_IDENTITY_OPENID_CLIENT_ID}
     MINIO_IDENTITY_OPENID_CLIENT_SECRET: ${MINIO_IDENTITY_OPENID_CLIENT_SECRET}
+    MINIO_IDENTITY_OPENID_CLAIM_NAME: ${MINIO_IDENTITY_OPENID_CLAIM_NAME}
   healthcheck:
     test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
     interval: 30s
